@@ -31,7 +31,7 @@ export default function Write() {
     }
     try {
       const res = await instance.post("/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      window.location.replace("/api/post/" + res.data._id);
       // console.log(newPost)
     } catch (err) {
       console.log(err);
