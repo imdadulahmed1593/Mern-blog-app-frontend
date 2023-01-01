@@ -2,12 +2,14 @@ import { useContext, useState } from "react";
 import "./write.css";
 import { Context } from "../../context/Context";
 import instance from "../../axiosConfig.js"
+import { useHistory } from "react-router-dom";
 
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
+  const history = useHistory()
 
   
 
@@ -30,7 +32,8 @@ export default function Write() {
     }
     try {
       const res = await instance.post("/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      history.push("/post/" + res.data._id)
+      // window.location.replace("/post/" + res.data._id);
       // console.log(newPost)
     } catch (err) {
       console.log(err);
