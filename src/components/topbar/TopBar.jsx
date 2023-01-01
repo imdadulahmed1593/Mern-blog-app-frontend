@@ -6,6 +6,7 @@ import "./topbar.css";
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
   const PF = "https://blog-app-api-wf9d.onrender.com/images/";
+  // const PF = "http://localhost:5000/images/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });

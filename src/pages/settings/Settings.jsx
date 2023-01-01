@@ -2,7 +2,6 @@ import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
 import instance from "../../axiosConfig"
 
@@ -14,8 +13,8 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
   const history = useHistory()
 
-  
-  const PF = "http://localhost:5000/images/"
+  const PF = "https://blog-app-api-wf9d.onrender.com/images/";
+  // const PF = "http://localhost:5000/images/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
