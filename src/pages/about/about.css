@@ -1,0 +1,9 @@
+.about{
+    min-height: 100vh;
+    background-color:#111;
+    display: grid;
+    place-items: center;
+    font-size: 80px;
+    color: white;
+
+}
