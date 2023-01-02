@@ -31,10 +31,12 @@
 
 .sidebarItem > img {
   margin-top: 15px;
+  width: 80%;
+  object-fit: contain;
 }
 
 .sidebarItem > p {
-  padding: 30px;
+  padding:10px 30px;
 }
 
 .sidebarList {
